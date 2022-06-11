@@ -3,9 +3,9 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60vh;
+    height: 40vh;
     margin: 10%;
-    
+    font-family: 'Open Sans', sans-serif;
 }
 
 .weather-box{
@@ -14,4 +14,22 @@ body{
     border-radius: 10px;
     box-shadow: 4.2px 8.5px 8.5px hsl(0deg 0% 0% / 0.37);
     padding: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    font-size: 1.8rem;
+    justify-items: center;
+}
+
+.icon{
+    font-size: 3rem;
+}
+
+.city{
+    grid-column: span 2;
+}
+
+.credits{
+    grid-column: span 2;
+    text-align: center;
 }
