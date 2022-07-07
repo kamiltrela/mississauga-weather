@@ -1,0 +1,4 @@
+#Secret Folder
+.env 
+/node_modules
+nodemon.json
