@@ -8,6 +8,15 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 
+main{
+    text-align: center;
+}
+
+.title{
+    font-size: 1.8rem;
+    
+}
+
 .weather-box{
     background-color: #1c6873;
     border: 4px solid #1c6873;
@@ -19,6 +28,8 @@ body{
     grid-template-rows: 1fr 1fr 1fr;
     font-size: 1.8rem;
     justify-items: center;
+    color: #ffc75f;
+    font-weight: bold;
 }
 
 .icon{
