@@ -1,17 +1,20 @@
+// url of Express API that serves info from OpenWeatherMap API
 const url = 'http://localhost:3000/';
 
-const LoadData = async () => {
-            try {
-                const res = await fetch(url,{
-                method: 'GET', // *GET, POST, PUT, DELETE, etc.
-                mode: 'cors', // no-cors, *cors, same-origin
-                cache: 'no-cache'});
-                const data = await res.json();
-                //console.log(data);
-                return data;
-            }catch(err) {
-                console.error(err)
-            }
-        };
 
-        LoadData().then( (data) => console.log(data) );
+
+// fetch JSON data to serve to front-end. displays temperature. 
+fetch(url)
+    .then(response => {
+        return response.json();
+    })
+    .then(data => {
+        const icon = data.weather[0].icon;
+        document.getElementById('temp').innerHTML = data.main.temp + " °C ";
+
+        document.getElementById('icon').innerHTML = `<img src="/images/${icon}.png">`;
+    })
+    .catch(err => {
+        console.log(err);
+    })
+
