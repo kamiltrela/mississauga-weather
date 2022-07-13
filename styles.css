@@ -1,46 +1,75 @@
 body{
     background-color: #ffc75f;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40vh;
-    margin: 10%;
+}
+
+header{
+    font-size: 30px;
+}
+
+main, header, section{
+    margin: 0;
+    padding: 20px;
+    color: #ffffff;
     font-family: 'Open Sans', sans-serif;
 }
 
-main{
+header{
+    background: #ffc75f;
     text-align: center;
 }
 
-.title{
-    font-size: 1.8rem;
-    
+.temperature{
+    flex: 1;
+    text-align: center;
+    font-size: 45px;
+    padding-top: 8%;
 }
 
-.weather-box{
-    background-color: #1c6873;
-    border: 4px solid #1c6873;
-    border-radius: 10px;
-    box-shadow: 4.2px 8.5px 8.5px hsl(0deg 0% 0% / 0.37);
-    padding: 5%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    font-size: 1.8rem;
-    justify-items: center;
-    color: #ffc75f;
-    font-weight: bold;
-}
-
-.icon{
-    font-size: 3rem;
+.image{
+    flex: 0 1 300px;
+    align-items: center;
 }
 
 .city{
-    grid-column: span 2;
+    background: #1c6873;
+    text-align: center;
 }
 
 .credits{
-    grid-column: span 2;
+    background:#ffc75f;
     text-align: center;
+}
+
+.flex-container{
+    display: flex;
+    background: #1c6873;
+
+}
+
+.footer{
+    background: #ffc75f;
+    color: black;
+    text-align: center;
+    bottom: 0;
+    height: 20px;
+    font-size: 70%;
+}
+
+/* Media Queries */
+@media screen and (max-width: 600px){
+    header{
+        font-size: 20px;
+    }
+
+    .temperature{
+        flex: 1;
+        text-align: center;
+        font-size: 25px;
+        padding-top: 25%;
+    }
+    
+    .image{
+        flex: 0 1 150px;
+        align-items: center;
+    }
 }

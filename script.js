@@ -10,7 +10,7 @@ fetch(url)
     })
     .then(data => {
         const icon = data.weather[0].icon;
-        document.getElementById('temp').innerHTML = data.main.temp + " °C ";
+        document.getElementById('temp').innerHTML = Math.ceil(data.main.temp) + "°C";
 
         document.getElementById('icon').innerHTML = `<img src="/images/${icon}.png">`;
     })
